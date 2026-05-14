@@ -39,7 +39,7 @@ export async function getCurso() {
     }
 }
 
- export async function deleteAluno(id: number) {
+ export async function deleteCurso(id: number) {
     const cookiesStore = await cookies();
     const token = cookiesStore.get("acess_token")?.value;
 

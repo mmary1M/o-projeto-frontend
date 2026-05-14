@@ -1,9 +1,9 @@
-import CursoItem from "../../components/cursoItem";
+import CursoItem from "@/components/CursoItem";
 import {getCurso} from "./actions"
 import Link from "next/link";
 
 
-export default async function alunosPage(){
+export default async function CursosPage(){
    const cursos = await getCurso();
 
     return(
@@ -13,9 +13,10 @@ export default async function alunosPage(){
             <div className="w-50 h-70 bg-white rounded-md shadow-md shadow-white text-black p-2 overflow-auto">
                 <ul className="flex flex-col items-center gap-2 ">
                {cursos.map(cursos => (
-                        <cursoItem key={curso.id} nome={curso.nome} id={curso.id}/>
+                        <CursoItem key={cursos.id} nome={cursos.nome} id={cursos.id}></CursoItem>
 
-                    ))}
+                    ))
+                    }
                     
                     
                 </ul>
